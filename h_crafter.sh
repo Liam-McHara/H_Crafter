@@ -1,7 +1,8 @@
 #!/bin/sh
 
-name="lib_name"
-src_dir="./src"
+name="lib_name"			# The name of your library
+src_dir="./src"			#	The folder where your .c files are
+
 name_h=$(echo $name |  tr '[:lower:]' '[:upper:]' | sed 's/$/_H/g')
 h_file="$name.h"
 ft_names=$(find $src_dir -type f -name "*.c" -exec basename {} .c \;)
